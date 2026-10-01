@@ -13,12 +13,12 @@
         $p2 = new contaBanco();
 
         $p1->abrirConta("CC");
-        $p1->setDono("Nick");
-        $p1->setNumConta(0401);
+        $p1->setDono("Neto");
+        $p1->setNumConta(2026);
 
         $p2->abrirConta("CP");
-        $p2->setDono("Mary");
-        $p2->setNumConta(0402);
+        $p2->setDono("Nick");
+        $p2->setNumConta(2027);
 
             print_r($p1);
             print_r($p2);
