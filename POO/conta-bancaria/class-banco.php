@@ -47,7 +47,7 @@
 ////////////////////////////////////////////////////////////////
             public function sacar($v){
                 if ($this->getStatus()){
-                    if ($this->getSaldo() > $v){
+                    if ($this->getSaldo() >= $v){
                         $this->setSaldo($this->getSaldo() - $v);
                     } else {
                         echo "Saldo insuficiente para sacar!";
@@ -66,7 +66,7 @@
                 if ($this->getStatus()){
                     $this->setSaldo($this->getSaldo() - $v);
                 } else {
-                    echo "Problemas com a conta, não é possível         cobrar!";
+                    echo "Problemas com a conta, não é possível cobrar!";
                     }
             }
 ///////////////////////////////////////////////////////////
