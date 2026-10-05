@@ -8,7 +8,8 @@
 <body>
     <?php
             require_once 'interface.php';
-        class ControleRemoto implements Controlador {
+        class ControleRemoto 
+         implements Controlador {
             //atributos
             private $volume;
             private $ligado;
@@ -45,13 +46,13 @@
             }
 //-------------------------------------------------------------------
             //métodos abstratos
-            private function Ligar() {
+            public function Ligar() {
                 $this->setLigado(true);
             }
-            private function Desligar() {
+            public function Desligar() {
                 $this->setLigado(false);
             }
-            private function abrirMenu() {
+            public function abrirMenu() {
                 echo "<p>Está ligado? " . ($this->getLigado() ? "Sim" : "Não") . "</p>";
                 echo "<p>Está tocando? " . ($this->getTocando() ? "Sim" : "Não") . "</p>";
                 echo "<p>Volume: " . $this->getVolume() . "</p>";
@@ -60,39 +61,39 @@
                 }
                 echo "<br>";
             }
-            private function fecharMenu() {
+            public function fecharMenu() {
                 echo "<p>Fechando menu...</p>";
             }
-            private function maisVolume() {
+            public function maisVolume() {
                 if ($this->getLigado()) {
                     $this->setVolume($this->getVolume() + 10);
                 } else {
                     echo "<p>Impossível aumentar volume. O controle está desligado.</p>";
                 }
             }
-            private function menosVolume() {
+            public function menosVolume() {
                 if ($this->getLigado()) {
                     $this->setVolume($this->getVolume() - 10);
                 } else {
                     echo "<p>Impossível diminuir volume. O controle está desligado.</p>";
                 }
             }
-            private function ligarMudo() {
+            public function ligarMudo() {
                 if ($this->getLigado() && $this->getVolume() > 0) {
                     $this->setVolume(0);
                 }
             }
-            private function desligarMudo() {
+            public function desligarMudo() {
                 if ($this->getLigado() && $this->getVolume() == 0) {
                     $this->setVolume(50); // Define um valor padrão para o volume ao desligar o mudo
                 }
             }
-            private function play() {
-                if ($this->getLigado() && !$this->getTocando()) {
+            public function play() {
+                if ($this->getLigado() && (!$this->getTocando()) ) {
                     $this->setTocando(true);
                 }
             }
-            private function pause() {
+            public function pause() {
                 if ($this->getLigado() && $this->getTocando()) {
                     $this->setTocando(false);
                 }

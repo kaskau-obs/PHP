@@ -8,10 +8,10 @@
 <body>
     <h1>POO em PHP - capsula</h1>
     <?php
-        require_once 'class.php';
+        require_once 'controle.php';
 
         $controle = new ControleRemoto();
-        $controle->Ligar();
+        $controle->ligar();
         $controle->abrirMenu();
 
     

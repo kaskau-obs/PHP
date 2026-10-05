@@ -76,7 +76,6 @@
                 echo "Conta criada!";
             }
 
-///////////////////////////////////////////////////////////
                 public function getnumConta(){
                     return $this->numConta;
                 }

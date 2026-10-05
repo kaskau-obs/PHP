@@ -8,7 +8,7 @@
 <body>
     <?php
         interface Controlador {
-        //métodos abstratos
+        //Como já está em interface, não precisa colocar public abstract
                 public function ligar();
                 public function desligar();
                 public function abrirMenu();
