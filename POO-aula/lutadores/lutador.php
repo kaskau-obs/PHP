@@ -102,13 +102,13 @@
             }
 //-------------------------------------------------------
             public function apresentar(){
-                echo "Lutador: " . $this->getNome();
-                echo "Nacionalidade: " . $this->getNacao();
-                echo "Idade: " . $this->getIdade();
-                echo "Altura: " . $this->getAltura() . "m";
-                echo "Peso: " . $this->getPeso() . "kg";
-                echo "Vitórias: " . $this->getWins();
-                echo "Derrotas: " . $this->getLosses();
+                echo " Lutador: " . $this->getNome();
+                echo " Nacionalidade: " . $this->getNacao();
+                echo " Idade: " . $this->getIdade();
+                echo " Altura: " . $this->getAltura() . "m";
+                echo " Peso: " . $this->getPeso() . "kg";
+                echo " Vitórias: " . $this->getWins();
+                echo " Derrotas: " . $this->getLosses();
                 echo "Empates: " . $this->getDraws();
             }
 //-----------------------------------------------------            
@@ -132,7 +132,7 @@
                 $this->setDraws($this->getDraws() + 1);
             }
 //------------------------------------------------------
-        }
+            }
     ?>
     
 </body>

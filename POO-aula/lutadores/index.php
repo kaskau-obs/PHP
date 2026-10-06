@@ -7,16 +7,13 @@
 </head>
 <body>
     <?php 
-        require_once 'index.php';
+        require_once 'lutador.php';
+    $l = array();
 
-    $l1 = new lutador ("Buneco", "Brasil", 25, 1.70, 70, 3, 1, 0);
-    $l2 = new lutador ("Buneca", "Brasil", 23, 1.71, 65, 0, 0, 0);
+$l[0] = new lutador ("Buneco", "Brasil", 25, 1.70, 70, 3, 1, 0);
+$l[1] = new lutador ("Buneca", "Brasil", 23, 1.71, 58, 0, 0, 0);
 
-
-        $l1->apresentar();
-
-        
-    
+                
         
         ?>
     
