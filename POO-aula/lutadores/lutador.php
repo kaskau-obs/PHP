@@ -23,7 +23,7 @@
                 $this->nacao     =  $nacao;
                 $this->idade     =  $idade;
                 $this->altura    =  $altura;
-                $this->peso      =  $peso;
+                $this->setPeso($peso);
                 $this->wins      =  $wins;                $this->losses    =  $losses;                $this->draws     =  $draws;
             }
 //métodos getters e setters            
@@ -66,7 +66,7 @@
             public function getCategoria(){
                 return $this->categoria;
             }
-            public function setCategoria($categoria){
+            private function setCategoria($categoria){
                 if($this->peso < 45){
                     $this->categoria = "inválido";
                 } elseif($this->peso >= 45 && $this->peso < 60){
@@ -105,27 +105,31 @@
                 echo "Lutador: " . $this->getNome();
                 echo "Nacionalidade: " . $this->getNacao();
                 echo "Idade: " . $this->getIdade();
-                echo "Altura: " . $this->getAltura();
-                echo "Peso: " . $this->getPeso(), "kg";
+                echo "Altura: " . $this->getAltura() . "m";
+                echo "Peso: " . $this->getPeso() . "kg";
                 echo "Vitórias: " . $this->getWins();
                 echo "Derrotas: " . $this->getLosses();
                 echo "Empates: " . $this->getDraws();
             }
 //-----------------------------------------------------            
             public function status(){
-
+                echo "Lutador: " . $this->getNome();
+                echo "Categoria: " . $this->getCategoria();
+                echo "Vitórias: " . $this->getWins();
+                echo "Derrotas: " . $this->getLosses();
+                echo "Empates: " . $this->getDraws();
             }
 //------------------------------------------------------
             public function ganharLuta(){
-
+                $this->setWins($this->getWins() + 1);
             }
 //------------------------------------------------------
             public function perderLuta(){
-
+                $this->setLosses($this->getLosses() + 1);
             }
 //------------------------------------------------------
             public function empatarLuta(){
-
+                $this->setDraws($this->getDraws() + 1);
             }
 //------------------------------------------------------
         }
