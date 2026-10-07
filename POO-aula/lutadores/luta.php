@@ -1,4 +1,5 @@
 <?php
+    require_once 'lutador.php';
     class Luta {
 //atributos
         private $desafiado;
@@ -6,7 +7,7 @@
         private $rounds;
         private $aprovada;
 
-//métodos getters setters
+//métodos getters setters públicos
         public function getDesafiado(){
             return $this->desafiado;
         }
@@ -18,7 +19,7 @@
             return $this->desafiante;
         }
         public function setDesafiante($desafiante){
-            $this->desafiante = $deafiante;
+            $this->desafiante = $desafiante;
         }   
 //-------------------------------------------------------
         public function getRounds(){
@@ -37,7 +38,7 @@
 //métodos
         //métodos
         public function marcarLuta($l1, $l2){
-    if($l1.getCategoria() == $l2.getCategoria() && $l1 != $l2) {
+    if($l1->getCategoria() === $l2->getCategoria() && ($l1 != $l2)) {
         $this->aprovada = true;
         $this->desafiado = $l1;
         $this->desafiante = $l2;
@@ -45,26 +46,35 @@
         $this->aprovada = false;
         $this->desafiado = null;
         $this->desafiante = null;
+            }
     }
 //---------------------------------------------------------    
-        public function lutar(){
-            if($this->marcarLuta = true){
+        public function lutar() {
+            if ($this->aprovada) {
                 $this->desafiado->apresentar();
-                $this->deafiante->apresentar();
-                $vencerdor = rand(0, 1, 2);
-                
-                switch($vencedor){
-                    case 0: //empate
-                        echo "EMPATE!!!";
-                        $this->desafiado->empatarLuta();
-                        $this->desafiante->empatarLuta();
-                    case 1 /*Venceu luta*/ {
-                        echo "VENCEU A LUTA!!!"
+                $this->desafiante->apresentar();
+                $vencedor = rand(0,2);
+                        switch($vencedor){
+                        case 0; //empate
+                            echo "Draw !!!";
+                            $this->desafiado->empatarLuta();
+                            $this->desafiante->empatarLuta();
+                            break;
+                        case 1; //desafiado vence
+                            echo "<p>" . $this->desafiante->getNome() . "Vendeu !!";
+                            $this->desafiado->ganharLuta();
+                            $this->desafiante->perderLura();
+                            break;
+                        case 2; //desafiante vence
+                            echo "<p>" . $this->desafiante->getNome() . "Venceu !!!";
+                            $this->desafiante->ganharLuta();
+                            $this->desafiado->perderLuta();                        
+                            break;
                     }
-                }
+                        } else {
+                            echo "Essa treta não pode acontecer!!!";
+                        }
             }
-
         }
-//---------------------------------------------------------        
-     }
-    ?>
+
+?>
