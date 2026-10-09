@@ -59,7 +59,7 @@
             }
 
         public function detalhes(){
-            echo "Num total de " . $this->getPaginasTot() . "agora estamos na página " . $this->getPagAtual();
+            echo "Num total de " . $this->getPaginasTot() . "páginas, a atual é " . $this->getPagAtual();
         }
 
         public function abrir(){
