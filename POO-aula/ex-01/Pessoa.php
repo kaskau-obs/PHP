@@ -32,7 +32,7 @@
                              }
 
     public function fazerAniver(){
-
+        $this->idade ++;
     }                  
 
     
