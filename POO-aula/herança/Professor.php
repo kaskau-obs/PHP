@@ -1,5 +1,5 @@
 <?php
-        class Professor {
+        class Professor extends Pessoa {
             private $especialidade;
             private $salario;
 

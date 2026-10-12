@@ -1,5 +1,5 @@
 <?php
-            class Aluno {
+            class Aluno extends Pessoa {
                 private $matr;
                 private $curso;
 

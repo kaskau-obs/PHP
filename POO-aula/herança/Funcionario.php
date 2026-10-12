@@ -1,5 +1,5 @@
 <?php
-            class Funcionario {
+            class Funcionario extends Pessoa {
                 private $setor;
                 private $working;
 
