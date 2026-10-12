@@ -1,3 +1,4 @@
+<pre>
 <?php
         require_once 'Pessoa.php';
         require_once 'Aluno.php';
@@ -12,7 +13,6 @@
         print_r($p1);
         print_r($p2);
         print_r($p3);
-        print_r($p4);
-//teste
-        
+        print_r($p4);    
 ?>
+</pre>
