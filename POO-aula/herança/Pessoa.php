@@ -1,4 +1,3 @@
-<pre>
 <?php
         class Pessoa {
             private $nome;
@@ -31,5 +30,4 @@
                 $this->sexo = $sexo;
             }
         }
-        ?>
-</pre>
+?>

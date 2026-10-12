@@ -1,5 +1,4 @@
-<pre>
-    <?php
+<?php
         class Professor {
             private $especialidade;
             private $salario;
@@ -20,10 +19,7 @@
 
 
             public function receberAum($aum){
-                if ($aum > 0){
-                    $this->getSalario() + $aum;
-                } else {echo "O aumento precisa ter um valor acima de zero para ter aumento!";}
+                 $this->salario += $aum;
             }
         }
-    ?>
-</pre>
+?>

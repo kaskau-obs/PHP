@@ -1,5 +1,4 @@
-<pre>
-    <?php
+<?php
             class Funcionario {
                 private $setor;
                 private $working;
@@ -19,7 +18,8 @@
                 }
 
 
-                public function mudarWork(){}
+                public function mudarWork(){
+                    $this->working = ! $this->working;
+                }
             }
-    ?>
-</pre>
+?>

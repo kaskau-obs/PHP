@@ -1,5 +1,4 @@
-<pre>
-    <?php
+<?php
             class Aluno {
                 private $matr;
                 private $curso;
@@ -19,8 +18,7 @@
                 }
 
                 public function cancelarMatr(){
-
+                    echo "Matrícula cancelada!";
                 }
             }
-    ?>
-</pre>
+?>
